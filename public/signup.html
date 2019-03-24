@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Harmaal-Signup</title>
+    
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="assets/css/mainStyle.css">
+    
+    <!-- Bootstrap styling sheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Menifest -->
+    <link rel="manifest" href="assets/images/manifest.json">
+	
+	<!-- Tab Logo -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+</head>
+<body>
+    <!-- On the top of the website -->
+    <div id='pond' onload="return stateChange();">
+        <a href="signin.html" id="sign-in" class="signinanker " style="margin-left: 2%;color: black;">Signin</a> 
+        <a href="signup.html" id="sign-up" class="signinanker " style="margin-left: 1%;color: black;"> | SignUp</a>
+        <a class="signinanker pointer" id="sign-out" style="margin-left: 1%;color: black;" onclick="signout();">  Signout</a>
+    </div>
+    <!-- the main heading -->
+    <div>
+        <h1 class="mainHeading">HarMAAL</h1>
+    </div>
+    <!-- the navigator -->
+    <div id='container'>
+        <a class="headingcomponent" href="index.html">Home</a>
+        <a class="headingcomponent" href="Adsform.html">Add Ads</a>
+        <a class="headingcomponent" href="product.html">Products</a>
+        <a class="headingcomponent" href="notification.html">Notification</a>
+    </div>
+    
+    <!-- Sign in -->
+    <form onsubmit="return signup()">
+        <h2 class="subHeading">Signin</h2>
+        <br /><br />
+        <center class="form-group">
+            <label style="font-size: 20px;">First Name <input type="text" class="form-control input-lg" style="font-size: 16px;font-family: Verdana;" name="fname" id="fname" placeholder="Enter your first name" required /></label><br /><br />
+            <label style="font-size: 20px;">Last Name <input type="text" class="form-control input-lg" style="font-size: 16px;font-family: Verdana;" name="lname" id="lname" placeholder="Enter your last name" required /></label><br /><br />
+            <label style="font-size: 20px;">Email <input type="email" class="form-control input-lg" name="username" id="username" style="font-size: 16px;font-family: Verdana;" placeholder="Enter your email" required /></label><br /><br />
+            <label style="font-size: 20px;">Password <input type="password" class="form-control input-lg" name="password" maxlength="9" minlength="6" title="Enter minimum 6 digit" style="font-size: 16px;font-family: Verdana;" id="password" placeholder="Enter your Password" required /></label><br /><br />
+            <label style="font-size: 20px;">Contact Number <input type="tel" onsubmit="check();" class="form-control input-lg" name="contact" style="font-size: 16px;font-family: Verdana;" id="contact" placeholder="Enter your Contact number" required /></label><br /><br />
+            <label style="font-size: 20px;">Address <textarea name="address" class="form-control" id="address" cols="30" style="font-size: 16px;font-family: Verdana; resize: none;" rows="10" placeholder="Your current Address" required></textarea></label><br /><br />
+            <input type="button" class="btn btn-secondary" onclick="cancel();" value="Cancel"> <input type="submit" class="btn btn-secondary" value="Signup">   
+        </center>
+    </form>
+    <br /><br /><br />
+    <!-- footer -->
+    <div class="container footer" style="width: 100%;position: fixed;">
+        <footer>
+            <center>
+            &copy; all right Reserved
+            </center>
+        </footer>
+    </div> 
+    <!-- //First Scripting  -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyCFj3QkOS_IB-XbI2qtpr51LP5yKeKOees",
+        authDomain: "function-2a0fa.firebaseapp.com",
+        databaseURL: "https://function-2a0fa.firebaseio.com",
+        projectId: "function-2a0fa",
+        storageBucket: "function-2a0fa.appspot.com",
+        messagingSenderId: "106306790792"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <!-- Folder scripting -->
+    <!-- <script src="assets/js/validation.js"></script> -->
+    <script src="assets/js/switching.js"></script>
+    <script src="assets/js/signingScripting.js"></script>
+    <script>
+        var user = localStorage.getItem('userID');
+            console.log(user);
+    
+            var signInButton = document.getElementById('sign-in');
+            var signUpButton = document.getElementById('sign-up');
+            var signOutButton = document.getElementById('sign-out');
+            
+            if(user) {
+                console.log(user);
+                signInButton.setAttribute('hidden','true');
+                signUpButton.setAttribute('hidden','true');
+                signOutButton.removeAttribute('hidden');
+            } else {
+                console.log(user);
+                signOutButton.setAttribute('hidden','true');
+                signInButton.removeAttribute('hidden');
+                signUpButton.removeAttribute('hidden');
+            }
+        </script>
+    <script src="assets/library/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Notification</title>
+        
+        <!-- CSS Link -->
+        <link rel="stylesheet" href="assets/css/mainStyle.css">
+        <link rel="stylesheet" href="assets/css/detailChat.css">
+        <link rel="stylesheet" href="assets/css/detailChatBox.css">
+        
+        <!-- Bootstrap styling sheet -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Menifest -->
+        <link rel="manifest" href="assets/images/manifest.json">
+		
+		<!-- Tab Logo -->
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    </head>
+    <body>
+        <!-- On the top of the website -->
+        <div id='pond'>
+            <a href="signin.html" id="sign-in" class="signinanker " style="margin-left: 2%;color: black;">Signin</a> 
+            <a href="signup.html" id="sign-up" class="signinanker " style="margin-left: 1%;color: black;"> | SignUp</a>
+            <a class="signinanker pointer" id="sign-out" style="margin-left: 1%;color: black;" onclick="signout();">  Signout</a>
+        </div>
+        <!-- the main heading -->
+        <div>
+            <h1 class="mainHeading">HarMAAL</h1>
+        </div>
+        <!-- the navigator -->
+        <div id='container'>
+            <a class="headingcomponent" href="index.html">Home</a>
+            <a class="headingcomponent" href="AdsForm.html">Add Ads</a>
+            <a class="headingcomponent" href="products.html">Products</a>
+            <a class="headingcomponent" href="notification.html">Notification</a>
+        </div>
+        <div class="text-center">
+            <h1>Chat Window</h1>
+
+            <div id="chatdiv" class="text-center">
+                <div class="chat_window">
+                    <div class="top_menu">
+                        <div id="title" class="buttons">
+                            <div class="button close" onclick="off()">&times;</div>
+                        </div>
+                        <div class="title" id="friendName">Chat</div>
+                    </div>
+                    <ul id="conversationArea" class="messages">
+                        
+                    </ul>
+                    <div class="bottom_wrapper clearfix">
+                        <div class="message_input_wrapper">
+                            <input id="message" class="message_input" placeholder="Type your message here.." />
+                        </div>
+                        <div class="send_message" onclick="sentmsg()" >
+                            <div class="icon"></div>
+                            <div class="text">Send</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="maindiv" align="center" class="text-center">
+
+                <div id="userlist" class="list-group" onload="return ownerName();">
+                        
+                    </a>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+        
+        <!-- footer -->
+        <div class="container footer" style="width: 100%;position: fixed;">
+            <footer>
+                <center>
+                &copy; All Right Reserved
+                </center>
+            </footer>
+        </div> 
+        <!-- //First Scripting  -->
+        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+            var config = {
+            apiKey: "AIzaSyCFj3QkOS_IB-XbI2qtpr51LP5yKeKOees",
+            authDomain: "function-2a0fa.firebaseapp.com",
+            databaseURL: "https://function-2a0fa.firebaseio.com",
+            projectId: "function-2a0fa",
+            storageBucket: "function-2a0fa.appspot.com",
+            messagingSenderId: "106306790792"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script>
+            var user = localStorage.getItem('userID');
+                console.log(user);
+        
+                var signInButton = document.getElementById('sign-in');
+                var signUpButton = document.getElementById('sign-up');
+                var signOutButton = document.getElementById('sign-out');
+                
+                if(user) {
+                    console.log(user);
+                    signInButton.setAttribute('hidden','true');
+                    signUpButton.setAttribute('hidden','true');
+                    signOutButton.removeAttribute('hidden');
+                } else {
+                    console.log(user);
+                    signOutButton.setAttribute('hidden','true');
+                    signInButton.removeAttribute('hidden');
+                    signUpButton.removeAttribute('hidden');
+                }
+            </script>
+        <!-- Folder scripting -->
+        <script src="assets/js/switching.js"></script>
+        <script src="assets/js/chatScripting.js"></script>
+        <script src="assets/library/jquery-3.3.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

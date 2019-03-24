@@ -1,0 +1,27 @@
+#chatdiv{
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    margin: auto auto;
+    
+    position: absolute;
+    background-color: white;
+    top: 7%;
+    left: 10%;
+    bottom: auto;
+    z-index: 11111;
+    display: none;
+   
+}
+#hide{
+    float: right;
+}
+#maindiv{
+    opacity: 1;
+}
+#title{
+    float: right;
+}
+#conversationArea{
+    overflow: scroll;
+}

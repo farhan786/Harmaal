@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Harmaal</title>
+    
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="assets/css/mainStyle.css">
+    <!-- Bootstrap styling sheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <!-- Menifest -->
+    <link rel="manifest" href="assets/images/manifest.json">
+	
+	<!-- Tab Logo -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+    <!-- On the top of the website -->
+    <div id='pond'>
+        <a href="signin.html" id="sign-in" class="signinanker " style="margin-left: 2%;color: black;">Signin</a> 
+        <a href="signup.html" id="sign-up" class="signinanker " style="margin-left: 1%;color: black;"> | SignUp</a>
+        <a class="signinanker pointer" id="sign-out" style="margin-left: 1%;color: black;" onclick="signout();">  Signout</a>
+    </div>
+    <!-- the main heading -->
+    <div>
+        <h1 class="mainHeading">HarMAAL</h1>
+    </div>
+    <!-- the navigator -->
+    <div id='container'>
+        <a class="headingcomponent" href="#">Home</a>
+        <a class="headingcomponent" href="AdsForm.html">Add Ads</a>
+        <a class="headingcomponent" href="products.html">Products</a>
+        <a class="headingcomponent" href="notification.html">Notification</a>
+    </div>
+    <div class="container" style="width: 100%;height: 600px;padding-right: 0px;padding-left: 0px;">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height: 100%;">
+          <!-- Wrapper for slides -->
+            <div class="carousel-inner" >
+                <!-- First carousel -->
+                <div class="item nature active">
+                    <img src="assets/images/slider_images/home.jpg" alt="Dishes" style="width:100%; height:600px">
+                    <div class="carousel-caption" style="background-color: lightslategray;border: black 3px solid;opacity: 0.8;" >
+                        <h3  style="color: black">Kitchen Products are also avaliable</h3>
+                        <p  style="color: black">Oh ladies! now you dont want to go market and spend 15 hours on finding product just visit are website and buy your favorite product</p>
+                    </div>
+                </div>
+                <!-- Second carousel -->
+                <div class="item nature">
+                    <img src="assets/images/slider_images/iphone.png" alt="phone" style="width:100%; height:600px">
+                    <div class="carousel-caption" style="background-color: lightslategray;border: black 3px solid;opacity: 0.8;" >
+                        <h3  style="color: black">Different Brands of Phone</h3>
+                        <p style="color: black">You want to buy phone no problem just post it on 'Harmaal.com.pk' and buy iphone.</p>
+                    </div>
+                </div>
+                <!-- Third carousel -->
+                <div class="item nature">
+                    <img src="assets/images/slider_images/ecom1.jpg" alt="market" style="width:100%; height:600px">
+                    <div class="carousel-caption" style="background-color: lightslategray;border: black 3px solid;opacity: 0.8;" >
+                        <h3  style="color: black">Change your self with fastly growing world</h3>
+                        <p  style="color: black">'Harmaal' is ready to help you to find world best things in just one click. So, what are you waiting for...</p>
+                    </div>
+               </div>
+        
+            </div>
+      
+          <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel"  onclick="myShow.previous()" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next" onclick="myShow.next()">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!-- view of Owner -->
+    <div  class="container">
+        <h2 class="mainHeading">About Us</h2>
+        <p style="word-spacing: 2px;letter-spacing: 2px;text-align: justify;"><img src="assets/images/slider_images/owner.jpg" style="margin-right: 3%;width: 24%;height: 232px;" align="left" />The <b>HarMAAL</b> marketplace is a platform for buying and selling services and goods such as electronics, furniture, 
+            household goods, cars and bikes. In 2014, the platform had 11 billion page views
+            , 200 million monthly active users, 25 million listings, and 8.5 million transactions per month.<br />
+            In 2014, HarMAAL's global traffic was 240 million unique monthly visits, 54% of which came from mobile .
+            <br />
+            In late 2016 it launched Tradus as a heavy machinery classifieds site. It lists ads for used, heavy machinery and 
+            vehicles in the fields of construction, transport, and farming, and also spare parts for such machines.<br />
+            Madison is a director of brand marketing, with experience managing global teams and multi-million-dollar campaigns. Her background in brand strategy, visual design, and account management inform her mindful but competitive approach.
+
+            Madison is fueled by her passion for understanding the nuances of cross-cultural advertising. He considers herself a ‘forever student,’ eager to both build on her academic foundations in psychology and sociology and stay in tune with the latest digital marketing strategies through continued coursework.
+
+            Her hunger for knowledge and determination to turn information into action has contributed to her most recent success at Rockwell Group, where he led international, award-winning campaigns for heavy-hitting brands such as Puma, Gucci, and Rolex.
+
+            Meanwhile, he vastly improved the productivity of her team by implementing strategic project management strategies and ensuring a work-life balance for her department. Madison believes mindfulness in the workplace is key to success - a tenet he lives out through her interests in yoga, meditation, gardening, and painting. 
+
+            Madison is currently working as a freelance marketing director and is always interested in a challenge. Reach out to madisonblackstone@gmail.com to connect!
+        </p>
+    </div>
+
+    <div class="container footer" style="width: 100%;">
+        <footer>
+            <center>
+            &copy; All Right Reserved
+            </center>
+        </footer>
+    </div> 
+    <!-- //First Scripting  -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyCFj3QkOS_IB-XbI2qtpr51LP5yKeKOees",
+        authDomain: "function-2a0fa.firebaseapp.com",
+        databaseURL: "https://function-2a0fa.firebaseio.com",
+        projectId: "function-2a0fa",
+        storageBucket: "function-2a0fa.appspot.com",
+        messagingSenderId: "106306790792"
+        };
+        firebase.initializeApp(config);
+    </script>
+    
+    <!-- Register the Service worker -->
+    <script type="text/javascript">
+        if ('serviceWorker' in navigator) {
+        window.addEventListener('load', ev => {
+            navigator.serviceWorker.register('sw.js')
+            .then(res => console.log('registered!!!'))
+            .catch(err => console.log(err));
+        })
+        }
+    </script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    
+    <!-- Folder scripting -->
+    <script src="assets/js/switching.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+    var user = localStorage.getItem('userID');
+   //     console.log(user);
+
+        var signInButton = document.getElementById('sign-in');
+        var signUpButton = document.getElementById('sign-up');
+        var signOutButton = document.getElementById('sign-out');
+        
+        if(user) {
+ //           console.log(user);
+            signInButton.setAttribute('hidden','true');
+            signUpButton.setAttribute('hidden','true');
+            signOutButton.removeAttribute('hidden');
+        } else {
+     //       console.log(user);
+            signOutButton.setAttribute('hidden','true');
+            signInButton.removeAttribute('hidden');
+            signUpButton.removeAttribute('hidden');
+        }
+   </script>
+    <script src="assets/library/jquery-3.3.1.js"></script>
+    <script>myShow = w3.slideshow(".nature", 3000);</script>
+</body>
+</html>

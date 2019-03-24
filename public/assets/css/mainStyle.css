@@ -1,0 +1,136 @@
+.productBtn{
+    border: 1px white solid;
+    background: #03a9f4;
+    color: white;
+    border-radius: 5%;
+    padding: 4%;
+    margin: 10px;
+}
+.productBtn:hover{
+  border: 1px white solid;
+  background-color: blue;
+  color: white;
+
+}
+.productBtn:active{
+  border: 1px white solid;
+  background-color: royalblue;
+  color: white;
+
+}
+.hidden {
+    display: none;
+  }
+  .date{
+    color: lightslategrey;
+    font-size: 14px;
+  }
+
+  #bookmark{
+    display:flex;
+    /* justify-content:flex-end; */
+    color: lightslategrey;
+
+align-items:flex-end;
+  }
+  .pointer {cursor: pointer;}
+  
+  #bookmark:hover
+  {
+    color: #03a9f4;
+  }
+  #bookmark:active
+  {
+    color: #03a9f4;
+  }
+
+  .alert{
+    background: lemonchiffon;
+    color: gray;
+    border: 1px solid maroon;
+    margin: 5%;
+  }
+  #pond{
+    display: flex;
+    justify-content:flex-end;
+    padding-right: 2%;
+    border-bottom: 1px gray solid;
+    box-shadow:2px 1px 6px 0px #888888;
+  }
+  .signinanker:hover{
+    color: red;
+    text-decoration: none;
+  }
+  .mainHeading{
+    
+    display: flex;
+    justify-content:center;
+    font-family: -webkit-pictograph;
+    font-size: 50px;
+    text-shadow: 1px 1px 1px lightgrey;
+  }
+  .subHeading{
+    
+    display: flex;
+    justify-content:center;
+    font-family: -webkit-pictograph;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px lightgrey;
+  }
+  #container{
+    border-top: 2px solid black;
+    /* opacity: 2.3; */
+    box-shadow: 1px 1px 2px 1px grey;
+    padding: 1%;
+    display: flex;
+    justify-content: space-around;
+  }
+.headingcomponent{
+  color: black;
+  text-decoration: none;
+  padding: 0%;
+}
+.headingcomponent:hover{
+	text-decoration:none;
+  background-color: lightgray;
+	/* padding-left:5px;
+	padding-right:5px; */
+	color:black;  
+}
+.footer{
+   /* position: fixed; */
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+.boldDetails{
+  font-variant: small-caps;
+  font-size: 24px;
+  text-shadow: 5px 5px 8px lightgrey;
+}
+.boldInfo{
+  font-size: 24px;
+    color: black;
+    padding-left: 2%;
+    text-decoration: underline;
+}
+@media screen and (max-width: 415px) {
+  #category{
+    width: 100%;
+    margin-left: 28px; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  #favbtn{
+    width: 89%;
+    padding-bottom: 1px;
+    margin-bottom: 10px;
+  }
+  .resp{
+    width: 100%;
+    padding-bottom: 1px;
+    margin-bottom: 10px;
+    float: left;
+  }
+}
